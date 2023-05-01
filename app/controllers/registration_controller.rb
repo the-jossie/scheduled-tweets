@@ -10,8 +10,7 @@ class RegistrationController < ApplicationController
       session[:user_id] = @user.id
       redirect_to root_path, notice: "Successfully created account"
     else
-      flash[:alert] = "Something went wrong"
-      render :new
+      redirect_to signup_path, notice: "Something went wrong"
     end
   end
 
