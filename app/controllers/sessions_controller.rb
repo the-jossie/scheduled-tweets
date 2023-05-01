@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
 
       redirect_to root_path, notice: "Logged in successfully"
     else
-      redirect_to signin_path, notice: "Invalid email or password"
+      redirect_to login_path, notice: "Invalid email or password"
     end
   end
 
